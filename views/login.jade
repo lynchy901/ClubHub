@@ -3,14 +3,22 @@
 .container-fluid
     h1
         |Login
-    form(action="/login").form-inline
-        .form-group.col-md-4
+    form(action="/login", method = "post").form-inline
+        input.input-block-level(type = "text", name = "username", placeholder = "Email address")
+        input.input-block-level(type = "password", name = "password", placeholder = "Password")
+        label.checkbox.
+            <input type = "checkbox" value = "remember-me" /> Remember me
+        button.btn.btn-large.btn-primary(type="submit") Sign in
+
+
+
+        //.form-group.col-md-4
             h2 Username
 
             textarea(rows =1).form-control
                 |type name
 
-        .form-group.col-md-4
+        //.form-group.col-md-4
             h2 Password
 
             textarea(rows=1).form-control

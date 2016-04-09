@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d8dfb37a-1837-4072-9192-931e76771bb8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/signUp.jade" afterPath="$PROJECT_DIR$/views/signUp.jade" />
     </list>
     <ignored path="ClubHub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -317,7 +318,7 @@
       <workItem from="1460221058957" duration="4301000" />
       <workItem from="1460226860950" duration="989000" />
       <workItem from="1460228482780" duration="267000" />
-      <workItem from="1460229242574" duration="1690000" />
+      <workItem from="1460229242574" duration="1759000" />
     </task>
     <task id="LOCAL-00001" summary="Basics">
       <created>1460224522027</created>
@@ -347,11 +348,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460231080842</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sign up&#10;">
+      <created>1460231088391</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1460231088391</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7247000" />
+    <option name="totallyTimeSpent" value="7316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1142" height="820" extended-state="0" />

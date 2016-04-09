@@ -9,9 +9,8 @@ router.get('/', function(req, res, next) {
     res.render('login');
 });
 
-router.post('/', function(req, res, next) {
+router.get('/', function(req, res, next) {
     console.log("test");
-    console.log("sasdf");
 });
 
 module.exports = router;

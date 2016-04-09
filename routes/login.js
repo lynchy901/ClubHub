@@ -11,6 +11,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     console.log("test");
+    console.log("sasdf");
 });
 
 module.exports = router;

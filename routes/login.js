@@ -13,7 +13,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    db.getColumnDataByText("users", "username", "hello");
+    var user = req.body.username;
+    var result = db.getColumnDataByText("users", "username", user);
+    result.then(function(data) {
+       res.send(data);
+    });
 });
 
 module.exports = router;

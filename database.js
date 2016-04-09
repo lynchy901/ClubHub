@@ -17,18 +17,15 @@ module.exports = function() {
     return {
         getColumnDataByText: function(table, columnName, searchValue) {
             var deferred = q.defer();
-            
-            connection.connect();
+
             var query = "SELECT " + columnName + " FROM " + table + " WHERE " + columnName + "=" + "\'" + searchValue + "\'";
             console.log(query);
             connection.query(query, function(err, rows, fields) {
                 if (!err)
                     deferred.resolve(rows);
                 else
-                    console.log("Something went wront");
+                    deferred.reject("Something went wrong");
             });
-
-            connection.end();
             return deferred.promise;
         }
     }

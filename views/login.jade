@@ -1,26 +1,12 @@
+extends layout
 
-
-.container-fluid
-    h1
-        |Login
-    div(class = "loginTable")
+block content
+    h1 Log In
+    div
         form(action="/login", method = "post").form-inline
             input.input-block-level(type = "text", name = "username", placeholder = "Email address")
             br
-            input.input-block-level(type = "password", name = "password", placeholder = "Password")
+            input.input-block-level(type = "password", name = "password", placeholder = "Choose Password")
             br
-            button.btn.btn-large.btn-primary(type="submit") Sign in
-
-
-
-            //.form-group.col-md-4
-                h2 Username
-
-                textarea(rows =1).form-control
-                    |type name
-
-            //.form-group.col-md-4
-                h2 Password
-
-                textarea(rows=1).form-control
-                    |type password
+            button.btn.btn-large.btn-primary(type="submit") Log In
+            br

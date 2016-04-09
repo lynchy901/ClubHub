@@ -1,12 +1,13 @@
-//
-   Created by katiebradley on 4/9/16.
-.container-fluid
-    h1
-        | Sign Up
-    div(class = "signUpTable")
+extends layout
+
+block content
+    h1 Sign Up
+    div
         form(action="/login", method = "post").form-inline
             input.input-block-level(type = "text", name = "username", placeholder = "Email address")
             br
-            input.input-block-level(type = "password", name = "password", placeholder = "Choose Password")
+            input.input-block-level(type = "password", name = "password", placeholder = "Password")
             br
             button.btn.btn-large.btn-primary(type="submit") Sign Up
+            br
+

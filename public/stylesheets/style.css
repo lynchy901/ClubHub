@@ -15,31 +15,40 @@ body {
 
 }
 
-h1 {
-    background-color: #9acfea;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    font-size: 75px;
+/*h1 {*/
+    /*background-color: #9acfea;*/
+    /*text-align: center;*/
+    /*padding-top: 100px;*/
+    /*padding-bottom: 100px;*/
+    /*font-size: 75px;*/
 
-}
+/*}*/
 
-.btn{
+/*.btn{*/
 
-    font-size: 50px;
-    margin: 20px;
+    /*font-size: 50px;*/
+    /*margin: 20px;*/
 
-}
+/*}*/
 
-.loginTable{
-    color: blue;
-}
+/*.btnHome{*/
+    /*font-size: 25px;*/
+    /*float: right;*/
+/*}*/
+/*.btnHome2{*/
+    /*font-size: 25px;*/
+    /*float: left;*/
+/*}*/
 
-input {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 10px;
-    color: blue;
+/*.loginTable{*/
+    /*color: blue;*/
+/*}*/
 
-}
+/*input {*/
+    /*margin-bottom: 10px;*/
+    /*margin-top: 10px;*/
+    /*margin-left: 50px;*/
+    /*margin-right: 10px;*/
+    /*color: blue;*/
+
+/*}*/

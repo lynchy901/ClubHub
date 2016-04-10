@@ -1,13 +1,14 @@
 extends layout
 
 block content
-    h1 Sign Up
-    div
-        form(action="/login", method = "post").form-inline
-            input.input-block-level(type = "text", name = "username", placeholder = "Email address")
-            br
-            input.input-block-level(type = "password", name = "password", placeholder = "Password")
-            br
-            button.btn.btn-large.btn-primary(type="submit") Sign Up
-            br
+    div(class="container-fluid")
+        .jumbotron
+            h1 Sign Up
+
+    div(class="row")
+        div(class="loginBody")
+            div(class="input-group, col-sm-4")
+                input(type="text" class="form-control" placeholder="name@example.com" aria-describedby="basic-addon2")
+                input(type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2")
+                button(type="button" class="btn btn-default") Sign Up
 

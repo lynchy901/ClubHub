@@ -10,6 +10,10 @@ var users = require('./routes/users');
 var login = require('./routes/login');
 var signup = require('./routes/signup');
 var home = require('./routes/home');
+var calendar = require('./routes/calendar');
+var myclubs = require('./routes/myclubs');
+var profile = require('./routes/profile');
+var search = require('./routes/search');
 
 var app = express();
 
@@ -29,7 +33,10 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/login', login);
 app.use('/signup', signup);
-app.use('/home', home);
+app.use('/calendar', calendar);
+app.use('/myclubs', myclubs);
+app.use('/profile', profile);
+app.use('/search', search);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

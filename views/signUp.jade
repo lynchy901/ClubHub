@@ -8,7 +8,8 @@ block content
     div(class="row")
         div(class="loginBody")
             div(class="input-group, col-sm-4")
-                input(type="text" class="form-control" placeholder="name@example.com" aria-describedby="basic-addon2")
-                input(type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2")
-                button(type="button" class="btn btn-default") Sign Up
+                form(action="/signup")
+                    input(type="text" class="form-control" placeholder="name@example.com" aria-describedby="basic-addon2")
+                    input(type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2")
+                    button(type="button" class="btn btn-default") Sign Up
 

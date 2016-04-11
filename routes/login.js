@@ -24,23 +24,22 @@ router.post('/', function(req, res, next) {
     //when promise resolves, do stuff
     result.then(function(data) {
         var error = "Username or Password is incorrect";
-        //make sure username exists
-        if (data.length > 0) {
-            //make sure username entered by user equals username from db
-            if (user == data[0].username) {
-                //hash password and compare with hash from db
-                Bcrypt.compare(password, data[0].password, function(err, resp) {
-                    if (!err) {
-                        if (resp == true) {
-                            res.render('home');
-                        } else {
-                            res.send("Incorrect username or password");
-                        }
+        //make sure username exists and entered username equals username from db
+        if (data.length > 0 && user == data[0].username) {
+            //hash password and compare with hash from db
+            Bcrypt.compare(password, data[0].password, function(err, resp) {
+                if (!err) {
+                    if (resp == true) {
+                        res.render('home');
                     } else {
-                        console.log(err);
+                        res.send("Incorrect username or password");
                     }
-                });
-            }
+                } else {
+                    res.send("Something went wrong. Please try again");
+                }
+            });
+        } else {
+            res.send(error);
         }
     });
 });

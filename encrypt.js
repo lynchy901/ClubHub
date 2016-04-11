@@ -10,7 +10,6 @@ module.exports = function() {
     return {
         encryptString: function(string) {
             var deferred = q.defer();
-
             Bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
                 if(err) {
                     return console.error(err);
@@ -23,6 +22,6 @@ module.exports = function() {
                 });
             });
             return deferred.promise;
-        },
+        }
     }
 }

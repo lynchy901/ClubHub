@@ -3,9 +3,14 @@
  */
 var express = require('express');
 var router = express.Router();
+var helpers = require('../helpers')();
 
 router.get('/', function(req, res, next) {
-    res.render('profile');
+    if (helpers.checkSessionExists(req.session)) {
+        res.render('profile');
+    } else {
+        res.redirect('/login');
+    }
 });
 
 module.exports = router;

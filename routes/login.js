@@ -15,6 +15,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     //grab username and password from body
+    var sess = req.session;
     var user = req.body.username;
     var password = req.body.password;
 
@@ -30,6 +31,9 @@ router.post('/', function(req, res, next) {
             Bcrypt.compare(password, data[0].password, function(err, resp) {
                 if (!err) {
                     if (resp == true) {
+                        sess.username = user;
+                        sess.save();
+                        console.log(sess.username);
                         res.render('home');
                     } else {
                         res.send("Incorrect username or password");

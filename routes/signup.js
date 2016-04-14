@@ -4,7 +4,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../database')();
-var bcrypt = require('../encrypt')();
+var bcrypt = require('../helpers')();
 
 router.get('/', function(req, res, next) {
     res.render('signup');
@@ -30,7 +30,7 @@ router.post('/', function(req, res, next) {
                 var promise = db.createAccount(username, hash);
                 promise.then(function(status) {
                     if (status) {
-                        res.render('home');
+                        res.render('login');
                     } else {
                         console.log("Account not created");
                     }

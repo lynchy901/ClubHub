@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -28,6 +29,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 10000 }}));
+app.use(extendSession);
 
 app.use('/', routes);
 app.use('/users', users);
@@ -37,6 +40,7 @@ app.use('/calendar', calendar);
 app.use('/myclubs', myclubs);
 app.use('/profile', profile);
 app.use('/search', search);
+app.use('/home', home);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -68,6 +72,18 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+function extendSession(req, res, next) {
+  console.log("middleware");
+  if (req.method === 'GET') {
+    if (req.session.username) {
+      console.log("current session is : " + req.session.username);
+      req.session._garbage = Date();
+      req.session.touch();
+    }
+  }
+  next();
+}
 
 
 module.exports = app;

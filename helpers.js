@@ -22,6 +22,13 @@ module.exports = function() {
                 });
             });
             return deferred.promise;
+        },
+        checkSessionExists: function (session) {
+               if (session.username) {
+                   return true;
+               } else {
+                return false;
+            }
         }
     }
 }
